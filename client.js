@@ -1,16 +1,16 @@
 var protoPath = `${__dirname}/demo.proto`;
 
 var grpc = require('grpc');
-var protoLoader = require('@grpc/proto-loader')
+var protoLoader = require('@grpc/proto-loader');
 var packageDefinition = protoLoader.loadSync(protoPath, {
     keepCase: true,
     longs: String,
     enums: String,
     defaults: true,
     oneofs: true
-})
+});
 
-var demoProto = grpc.loadPackageDefinition(packageDefinition)
+var demoProto = grpc.loadPackageDefinition(packageDefinition);
 
 var main = function () {
     var id, name;
@@ -25,10 +25,10 @@ var main = function () {
         name = 'xqq';
     }
 
-    var client = new demoProto.user.User("localhost:50051", grpc.credentials.createInsecure())
+    var client = new demoProto.user.User("localhost:50051", grpc.credentials.createInsecure());
     client.f({ id, name }, (err, resp) => {
-        console.log(resp)
-    })
-}
+        console.log(resp);
+    });
+};
 
-main()
+main();
