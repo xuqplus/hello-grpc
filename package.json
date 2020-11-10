@@ -5,14 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "namespace-build": "./node_modules/.bin/rxjs-grpc -o grpc-namespaces.ts *.proto",
+    "ts-server": "ts-node server2.ts",
+    "ts-client": "ts-node client2.ts",
     "server": "node server.js",
     "client": "node client.js"
   },
   "author": "Qunqun Xu",
   "license": "ISC",
   "dependencies": {
-    "grpc": "^1.24.3",
+    "@grpc/proto-loader": "^0.5.5",
     "google-protobuf": "^3.0.0",
-    "@grpc/proto-loader": "^0.5.5"
-  }
+    "grpc": "^1.24.3",
+    "rxjs": "^6.6.3",
+    "rxjs-grpc": "^0.2.5",
+    "typescript": "^4.0.5"
+  },
+  "devDependencies": {}
 }
