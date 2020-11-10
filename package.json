@@ -1,0 +1,18 @@
+{
+  "name": "hello-grpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server.js",
+    "client": "node client.js"
+  },
+  "author": "Qunqun Xu",
+  "license": "ISC",
+  "dependencies": {
+    "grpc": "^1.24.3",
+    "google-protobuf": "^3.0.0",
+    "@grpc/proto-loader": "^0.5.5"
+  }
+}
